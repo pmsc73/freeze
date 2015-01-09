@@ -1,6 +1,21 @@
 <html>
+<!-- unicode hexagon: &#x2B22; -->
 <head>
 <style>
+.texthex {
+	float: left;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 82px;
+	margin-left: -12px;
+	margin-bottom: -66px;
+	color: #C6C;
+}
+.texthex-row {
+clear:left;
+}
+div.texthex-row:nth-of-type(even) {
+	margin-left:27px;
+}
 .hex {
 	float: left;
 	margin-left: 3px;
@@ -28,6 +43,28 @@
 }
 .hex-row.even {
 	margin-left: 27px;
+}
+.hex-null {
+	float: left;
+	margin-left: 3px;
+	margin-bottom: -13px;
+}
+.hex-null .top  {
+    width: 0;
+    border-bottom: 15px solid transparent;
+    border-left: 26px solid transparent;
+    border-right: 26px solid transparent;
+}
+.hex-null .middle {
+    width: 52px;
+    height: 30px;
+	background: transparent;
+}
+.hex-null .bottom {
+    width: 0;
+    border-top: 15px solid transparent;
+    border-left: 26px solid transparent;
+    border-right: 26px solid transparent;
 }
 h2 {
 	font-family:"Courier New", Courier, monospace;
@@ -58,10 +95,61 @@ document.onclick = readMouseClick;
 <div class="hex-row">
 	<div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div> 
 	<div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
+	<div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
 </div>
 <div class="hex-row even">
 	<div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div> 
 	<div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
+	<div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
+	<div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
+</div>
+<div class="hex-row">
+	<div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div> 
+	<div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
+	<div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
+	<div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
+	<div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
+</div>
+<div class="hex-row even">
+	<div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div> 
+	<div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
+	<div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
+</div>
+<div class="hex-row">
+	<div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div> 
+	<div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
+	<div class="hex-null"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
+	<div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
+	<div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
+</div>
+<div class="hex-row even">
+	<div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div> 
+	<div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
+	<div class="hex-null"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
+	<div class="hex-null"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
+	<div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
+</div>
+<br/>
+<div class="texthex-row">
+<div class="texthex">&#x2B22;</div><div class="texthex">&#x2B22;</div><div class="texthex">&#x2B22;</div>
+</div>
+<div class="texthex-row">
+<div class="texthex">&#x2B22;</div><div class="texthex">&#x2B22;</div><div class="texthex">&#x2B22;</div>
+<div class="texthex-row">
+<div class="texthex">&#x2B22;</div><div class="texthex">&#x2B22;</div><div class="texthex">&#x2B22;</div>
+</div>
+<div class="texthex-row">
+<div class="texthex">&#x2B22;</div><div class="texthex">&#x2B22;</div><div class="texthex">&#x2B22;</div>
+</div><div class="texthex-row">
+<div class="texthex">&#x2B22;</div><div class="texthex">&#x2B22;</div><div class="texthex">&#x2B22;</div>
+</div>
+<div class="texthex-row">
+<div class="texthex">&#x2B22;</div><div class="texthex">&#x2B22;</div><div class="texthex">&#x2B22;</div>
+<div class="texthex-row">
+<div class="texthex">&#x2B22;</div><div class="texthex">&#x2B22;</div><div class="texthex">&#x2B22;</div>
+</div>
+<div class="texthex-row">
+<div class="texthex">&#x2B22;</div><div class="texthex">&#x2B22;</div><div class="texthex">&#x2B22;</div>
 </div>
 </body>
 </html>
