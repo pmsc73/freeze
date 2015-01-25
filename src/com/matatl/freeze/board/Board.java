@@ -3,27 +3,50 @@ import java.util.ArrayList;
 
 public class Board {
 	
-	private static final int VAL_NONE =   0x6; // used for colors
-	private static final int VAL_HIGH = 0xC; // used for colors
-	public static final Color[] COLORS = {
-		new Color(VAL_NONE,VAL_NONE,VAL_NONE), // black
-		new Color(VAL_NONE,VAL_NONE,VAL_HIGH), // blue
-		new Color(VAL_NONE,VAL_HIGH,VAL_NONE), // green
-		new Color(VAL_HIGH,VAL_NONE,VAL_NONE), // red
-		new Color(VAL_NONE,VAL_HIGH,VAL_HIGH), // cyan
-		new Color(VAL_HIGH,VAL_NONE,VAL_HIGH), // yellow
-		new Color(VAL_HIGH,VAL_HIGH,VAL_NONE) // magenta
-	};
-	public static final int MAX_PLAYERS = 6;
-	private int players;
-		
-	
-	private ArrayList<Tile> tiles;
-	public Board(int players) {
-		this.players = players;
-		tiles = new BoardCreator(players).getTiles();
+	private ArrayList<Territory> territories;
+	private int players = Game.MAX_PLAYERS; // default number of players
+	private int width,height;
+	public Board(ArrayList<Territory> territories) {
+		this.territories = territories;
+		int xmin = Integer.MAX_VALUE;
+		int xmax = Integer.MIN_VALUE; 
+		int ymin = Integer.MAX_VALUE;
+		int ymax = Integer.MIN_VALUE;
+		for(Territory terr : territories) {
+			tx = terr.getX();
+			ty = terr.getY();
+			xmax = (tx > xmax) ? tx : xmax;
+			xmin = (tx < xmin) ? tx : xmin;
+			ymax = (ty > ymax) ? ty : ymax;
+			ymin = (ty < ymin) ? ty : ymin;
+		}
+		this.width = (xmax - xmin);
+		this.height= (ymax - ymin);
 	}
-	public ArrayList<Tile> getTiles() {
-		return tiles;
+	/**
+	 * @return width of the Board
+	 */
+	public int getWidth() {
+		return width;
+	}
+	/**
+	 * @return height of the Board
+	 */
+	public int getHeight() {
+		return height;
+	}
+	/** 
+	 * This method is a shorthand for inner ArrayList access
+	 * @param i index in the territories AL
+	 * @return Territory referenced by index
+	 */
+	public Territory getTerritory(int i) {
+		return territories.get(i);
+	}
+	/**
+	 * @return territories on the Board
+	 */
+	public ArrayList<Territory> getTerritories() {
+		return territories;
 	}
 }

@@ -45,7 +45,7 @@ public class Territory {
 	}
 	/**
 	 * GETTERS
-	 * getColor, getOwner, getTransfers, getUnitsOnFront 
+	 * getColor, getOwner, getTransfers, getUnitsOnFront, x,y 
 	 */
 	public String getColor() {
 		if(owner<Game.MAX_PLAYERS)
@@ -60,6 +60,12 @@ public class Territory {
 	}
 	public List<Integer> getUnitsOnFront() {
 		return unitsOnFront;
+	}
+	public int getX() {
+		return x;
+	}
+	public int getY() {
+		return y;
 	}
 	/**
 	 * size
